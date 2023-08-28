@@ -34,6 +34,7 @@ These are the induced libraries and their versions.
 [^ back to top](#pandalib)
 
 To proven clashes with other plugins all the packaged libraries have been relocated to `com.kruthers.lib`
+<br>*Note Adventure is **not** relocated to allow it to work with paper still*
 
 To use on gradle it requires use of [Shadow](https://imperceptiblethoughts.com/shadow/)
 
@@ -54,7 +55,6 @@ dependencies {
 
 tasks {
     shadowJar {
-        relocate("net.kyori","com.kruthers.lib.net.kyori")
         relocate("cloud","com.kruthers.lib.cloud")
         relocate("kotlin","com.kruthers.lib.kotlin")
     }

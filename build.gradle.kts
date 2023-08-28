@@ -46,7 +46,6 @@ tasks {
     shadowJar {
         archiveClassifier = ""
 
-        relocate("net.kyori","com.kruthers.lib.net.kyori")
         relocate("cloud","com.kruthers.lib.cloud")
         relocate("kotlin","com.kruthers.lib.kotlin")
     }
