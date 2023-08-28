@@ -37,7 +37,9 @@ dependencies {
     val adventureVersion = project.properties["adventure_version"].toString()
     implementation("net.kyori","adventure-api",adventureVersion)
     implementation("net.kyori","adventure-text-serializer-plain",adventureVersion)
+    implementation("net.kyori","adventure-text-serializer-legacy",adventureVersion)
     implementation("net.kyori","adventure-text-minimessage",adventureVersion)
+    implementation("net.kyori","adventure-platform-bukkit", "4.3.0")
 
     implementation("net.kyori","adventure-text-feature-pagination","4.0.0-SNAPSHOT")
 
@@ -46,9 +48,6 @@ dependencies {
 tasks {
     shadowJar {
         archiveClassifier = ""
-
-        relocate("cloud","com.kruthers.pandalib.cloud")
-//        relocate("kotlin","com.kruthers.pandalib.kotlin")
     }
     build {
         dependsOn(shadowJar)
