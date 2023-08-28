@@ -1,6 +1,7 @@
 .gradle
 **/build/
 !src/**/build/
+!gradle/wrapper/gradle-wrapper.jar
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -14,8 +15,25 @@ gradle-app.setting
 # Cache of project
 .gradletasknamecache
 
-# Eclipse Gradle plugin generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### Eclipse ###
+.apt_generated
 .classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store

@@ -1,0 +1,6 @@
+name: "{plugin_name}"
+main: "{maven_group}.pandalib.PandaLib"
+version: "{plugin_version}"
+description: "A common libary plugin used for Jordan's (kruthers) Plugins"
+api-version: 1.13
+author: "kruthers"
