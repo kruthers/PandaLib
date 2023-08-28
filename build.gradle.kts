@@ -31,6 +31,7 @@ dependencies {
     implementation("cloud.commandframework","cloud-kotlin-extensions",cloudVersion)
     implementation("cloud.commandframework","cloud-paper",cloudVersion)
     implementation("cloud.commandframework","cloud-minecraft-extras",cloudVersion)
+    implementation("cloud.commandframework","cloud-annotations",cloudVersion)
 
     //kyori
     val adventureVersion = project.properties["adventure_version"].toString()
