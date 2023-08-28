@@ -3,6 +3,7 @@ package com.kruthers.pandalib
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.*
+import kotlin.collections.HashMap
 
 class PandaLib: JavaPlugin() {
 
@@ -12,23 +13,19 @@ class PandaLib: JavaPlugin() {
             get() = versions
     }
 
-    private val properties: Properties = Properties()
-
     override fun onEnable() {
         this.logger.info("Loading PandaLib")
 
-        try {
-            properties.load(this.getResource(".properties"))
-        } catch (err: Exception) {
-            logger.severe("Failed to load plugin properties")
-            Bukkit.getPluginManager().disablePlugin(this)
-            return
+        val properties: HashMap<String, String> = hashMapOf()
+        Properties().also {
+            it.load(this.classLoader.getResourceAsStream(".properties"))
+            it.forEach { (key, value) -> properties["$key"] = "$value" }
         }
 
         try {
-            versions = VersionRegistry(this,this.properties)
+            versions = VersionRegistry(this, properties)
         } catch (err: Exception) {
-            logger.severe("Failed to load library versions.")
+            logger.severe("Failed to load library versions: $err")
             Bukkit.getPluginManager().disablePlugin(this)
             return
         }

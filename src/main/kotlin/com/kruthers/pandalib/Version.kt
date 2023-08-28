@@ -9,7 +9,7 @@ class Version(
     companion object {
         private val regex = Regex("^(\\d+)\\.(\\d+)\\.(\\d+)(?:-(\\w+)((?:\\.\\w+)+)?)?(\\+[\\S\\w]+)?\$")
         fun of(string: String): Version {
-            val matches = regex.matchEntire(string) ?: throw InvalidFormatException()
+            val matches = regex.matchEntire(string) ?: throw InvalidFormatException(string)
 
             val major = matches.groupValues[1].toInt()
             val minor = matches.groupValues[2].toInt()
@@ -25,7 +25,7 @@ class Version(
     }
 
     override fun toString(): String {
-        val state: String = if (this.displayState != null) {
+        val state: String = if (this.displayState != null && this.displayState != "") {
             "-$displayState"
         } else ""
 
@@ -111,7 +111,7 @@ class Version(
         }
     }
 
-    class InvalidFormatException: Exception("The provided string does not match the Semantic Versioning " +
+    class InvalidFormatException(name: String): Exception("The provided version string '$name' does not match the Semantic Versioning " +
             "2.0.0 specification please read them here: https://semver.org/")
 
 }

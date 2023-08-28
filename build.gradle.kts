@@ -46,8 +46,8 @@ tasks {
     shadowJar {
         archiveClassifier = ""
 
-        relocate("cloud","com.kruthers.lib.cloud")
-        relocate("kotlin","com.kruthers.lib.kotlin")
+//        relocate("cloud","com.kruthers.pandalib.cloud")
+//        relocate("kotlin","com.kruthers.pandalib.kotlin")
     }
     build {
         dependsOn(shadowJar)
