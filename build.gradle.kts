@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.0"
+    kotlin("jvm") version "1.9.20"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
@@ -39,7 +39,7 @@ dependencies {
     implementation("net.kyori","adventure-text-serializer-plain",adventureVersion)
     implementation("net.kyori","adventure-text-serializer-legacy",adventureVersion)
     implementation("net.kyori","adventure-text-minimessage",adventureVersion)
-    implementation("net.kyori","adventure-platform-bukkit", "4.3.0")
+    implementation("net.kyori","adventure-platform-bukkit", "4.3.1")
 
     implementation("net.kyori","adventure-text-feature-pagination","4.0.0-SNAPSHOT")
 
