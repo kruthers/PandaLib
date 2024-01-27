@@ -18,14 +18,14 @@ This is mainly used to help keep plugin sizes down and allow for easy cross comp
 
 These are the induced libraries and their versions.
 
- - [Kotlin](https://kotlinlang.org/) ![Version](https://img.shields.io/badge/V-1.9.0-green.svg)
- - [Cloud](https://github.com/Incendo/cloud/tree/master/docs) ![Version](https://img.shields.io/badge/V-1.7.1-green.svg)
+ - [Kotlin](https://kotlinlang.org/) ![Version](https://img.shields.io/badge/V-1.9.22-green.svg)
+ - [Cloud](https://github.com/Incendo/cloud/tree/master/docs) ![Version](https://img.shields.io/badge/V-1.8.4-green.svg)
    - cloud-core 
    - cloud-kotlin-extensions
    - cloud-paper
    - cloud-minecraft-extras
    - cloud-annotations
- - [Kyori Adventure](https://docs.advntr.dev/index.html) ![Version](https://img.shields.io/badge/V-4.14.0-green.svg)
+ - [Kyori Adventure](https://docs.advntr.dev/index.html) ![Version](https://img.shields.io/badge/V-4.15.0-green.svg)
    - adventure-api
    - adventure-text-serializer-plain
    - adventure-text-serializer-legacy
