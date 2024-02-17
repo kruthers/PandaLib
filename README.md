@@ -19,6 +19,9 @@ This is mainly used to help keep plugin sizes down and allow for easy cross comp
 These are the induced libraries and their versions.
 
  - [Kotlin](https://kotlinlang.org/) ![Version](https://img.shields.io/badge/V-1.9.22-green.svg)
+ - [Kotlinx serialization](https://kotlinlang.org/)
+   - json ![Version](https://img.shields.io/badge/V-1.6.0-green.svg)
+   - [yaml](https://github.com/charleskorn/kaml) ![Version](https://img.shields.io/badge/V-0.57.0-green.svg)
  - [Cloud](https://github.com/Incendo/cloud/tree/master/docs) ![Version](https://img.shields.io/badge/V-1.8.4-green.svg)
    - cloud-core 
    - cloud-kotlin-extensions

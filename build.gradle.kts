@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.22"
     id("com.github.johnrengelman.shadow") version "8.1.1"
+    kotlin("plugin.serialization") version "1.9.22"
 }
 
 group = project.properties["maven_group"].toString()
@@ -19,6 +20,8 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+    implementation("com.charleskorn.kaml:kaml:0.57.0")
 
     //paper
     val paperVersion = "${project.properties["minecraft_version"]}-${project.properties["paper_version"]}"
